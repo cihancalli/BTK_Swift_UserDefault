@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UserDefault" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qif-Db-i3X">
+                                <rect key="frame" x="20" y="109" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="When should it be done?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBG-fk-Czr">
+                                <rect key="frame" x="20" y="173" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqy-UI-23N">
+                                <rect key="frame" x="20" y="277" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="buttonSeve:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zDl-Gx-dIm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMB-KP-PE5">
+                                <rect key="frame" x="299" y="277" width="74" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                <connections>
+                                    <action selector="buttonDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgE-dw-cVw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work to do:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgy-5F-fg4">
+                                <rect key="frame" x="20" y="357" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To When:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfz-7o-qXL">
+                                <rect key="frame" x="20" y="398" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lgy-5F-fg4" firstAttribute="top" secondItem="pqy-UI-23N" secondAttribute="bottom" constant="45" id="1Yn-Qm-l1g"/>
+                            <constraint firstItem="pqy-UI-23N" firstAttribute="top" secondItem="hBG-fk-Czr" secondAttribute="bottom" constant="70" id="1rq-d1-1RV"/>
+                            <constraint firstItem="qif-Db-i3X" firstAttribute="leading" secondItem="hBG-fk-Czr" secondAttribute="leading" id="3Sc-7y-qn4"/>
+                            <constraint firstItem="qif-Db-i3X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4RM-p5-nrz"/>
+                            <constraint firstItem="qif-Db-i3X" firstAttribute="trailing" secondItem="hBG-fk-Czr" secondAttribute="trailing" id="EKf-Ez-Ta2"/>
+                            <constraint firstItem="Rfz-7o-qXL" firstAttribute="top" secondItem="Lgy-5F-fg4" secondAttribute="bottom" constant="20" id="F7t-AR-Ai4"/>
+                            <constraint firstItem="qif-Db-i3X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FKS-V1-Ckg"/>
+                            <constraint firstItem="Lgy-5F-fg4" firstAttribute="leading" secondItem="Rfz-7o-qXL" secondAttribute="leading" id="H6f-yT-m81"/>
+                            <constraint firstItem="hBG-fk-Czr" firstAttribute="trailing" secondItem="BMB-KP-PE5" secondAttribute="trailing" id="L4p-de-PUx"/>
+                            <constraint firstItem="Lgy-5F-fg4" firstAttribute="trailing" secondItem="Rfz-7o-qXL" secondAttribute="trailing" id="SYO-WV-sDj"/>
+                            <constraint firstItem="pqy-UI-23N" firstAttribute="baseline" secondItem="BMB-KP-PE5" secondAttribute="baseline" id="Yy5-3b-Aqq"/>
+                            <constraint firstItem="hBG-fk-Czr" firstAttribute="leading" secondItem="pqy-UI-23N" secondAttribute="leading" id="ebw-DY-CrF"/>
+                            <constraint firstItem="hBG-fk-Czr" firstAttribute="top" secondItem="qif-Db-i3X" secondAttribute="bottom" constant="30" id="hhH-LR-WMa"/>
+                            <constraint firstItem="BMB-KP-PE5" firstAttribute="trailing" secondItem="Lgy-5F-fg4" secondAttribute="trailing" id="q1E-5s-mUB"/>
+                            <constraint firstItem="qif-Db-i3X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="saQ-bO-OsB"/>
+                            <constraint firstItem="pqy-UI-23N" firstAttribute="leading" secondItem="Lgy-5F-fg4" secondAttribute="leading" id="teN-oD-5uF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelNote" destination="Lgy-5F-fg4" id="Pp3-Rc-o76"/>
+                        <outlet property="labelWhen" destination="Rfz-7o-qXL" id="1HI-QZ-h4i"/>
+                        <outlet property="textFieldNote" destination="qif-Db-i3X" id="O4N-yo-4mT"/>
+                        <outlet property="textFieldWhen" destination="hBG-fk-Czr" id="AY8-FG-P50"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="121" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
